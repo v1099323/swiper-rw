@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
-	<title>Главная</title>
+	<title>HomePage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230921154001">
+	<style>
+		body {
+			opacity: 0;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.min.css?_v=20231007014435">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,81 +19,478 @@
 <body>
 	<div class="wrapper">
 		<header class="header">
-
+			<div class="header__container">
+				<a class="header__logo" data-goto=".hero" href="#">
+					<img src="img/logo.svg" alt="HomePro">
+				</a>
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a class="menu__link" data-goto=".about" data-goto-header="" href="#">About Us</a></li>
+							<li class="menu__item"><a class="menu__link" data-goto=".services" data-goto-header="" href="#">Services</a></li>
+							<li class="menu__item"><a class="menu__link" data-goto=".blog" data-goto-header="" href="#">Our Blog</a></li>
+							<li class="menu__item"><a class="menu__link" data-goto=".contacts" data-goto-header="" href="#">Contact</a></li>
+						</ul>
+						<!-- here -->
+					</nav>
+				</div>
+				<div class="header__schedule" data-da=".menu__body, 768">24 Hour Services</div>
+			</div>
 		</header>
-		<main class="page-main">
-			<section class="main">
-				<div class="main__container">
-					<div class="main__slider swiper">
-						<div class="main__wrapper swiper-wrapper">
-							<div class="main__slide swiper-slide">
-								<div class="main__cart" style="--clr: #fb0277">
-									<div class="main__box">
-										<div class="main__icon">
-											<div class="main__iconBox">
-												<ion-icon name="heart-circle-outline"></ion-icon>
+		<main class="page">
+			<section class="hero">
+				<div class="hero__container" data-watch-threshold="0.3" data-watch="" data-watch-once="">
+					<div class="hero__image-ibg">
+						<picture><source srcset="img/hero/image-left.webp" type="image/webp"><img src="img/hero/image-left.jpg" alt="Image"></picture>
+					</div>
+					<div class="hero__body">
+						<div class="hero__content">
+							<ul class="hero__items items-hero">
+								<li class="items-hero__item">Maintenances</li>
+								<li class="items-hero__item">Repairs</li>
+								<li class="items-hero__item">Improvements</li>
+							</ul>
+							<div class="hero__block-header block-header block-header--center">
+								<h1 class="block-header__title block-header__title--white block-header__title--big">Need improvement or repair your home? we can help!</h1>
+							</div>
+							<ul class="hero__done done-hero">
+								<li class="done-hero__item">Free Quotes</li>
+								<li class="done-hero__item">100% Commitment-Free</li>
+							</ul>
+							<a class="hero__button button button--icon" href="#">
+								<span>Call Us Now</span>
+							</a>
+						</div>
+						<ul class="hero__advantages advantages-hero">
+							<li class="advantages-hero__item">
+								<div class="advantages-hero__icon">
+									<img src="img/icons/01.svg" alt="icon">
+								</div>
+								<div class="advantages-hero__text">
+									<p>Satisfaction Guarantee</p>
+								</div>
+							</li>
+							<li class="advantages-hero__item">
+								<div class="advantages-hero__icon">
+									<img src="img/icons/02.svg" alt="icon">
+								</div>
+								<div class="advantages-hero__text">
+									<p>24 HAvailability</p>
+								</div>
+							</li>
+							<li class="advantages-hero__item">
+								<div class="advantages-hero__icon">
+									<img src="img/icons/03.svg" alt="icon">
+								</div>
+								<div class="advantages-hero__text">
+									<p>Local US Professional</p>
+								</div>
+							</li>
+							<li class="advantages-hero__item">
+								<div class="advantages-hero__icon">
+									<img src="img/icons/04.svg" alt="icon">
+								</div>
+								<div class="advantages-hero__text">
+									<p>Flexible Appointments</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="hero__image-ibg">
+						<picture><source srcset="img/hero/image-right.webp" type="image/webp"><img src="img/hero/image-right.jpg" alt="Image"></picture>
+					</div>
+					<ul class="hero__decor decor-hero">
+						<li class="decor-hero__item"></li>
+						<li class="decor-hero__item"></li>
+					</ul>
+				</div>
+			</section>
+			<section class="about" data-watch-threshold="0.3" data-watch="navigator">
+				<div class="about__container" data-watch-threshold="0.3" data-watch="" data-watch-once="">
+					<div class="about__body">
+						<div class="about__block-header block-header">
+							<h2 class="block-header__title">Professional for your home services</h2>
+							<div class="block-header__text">
+								<p>You need help for home care? We are home care professionals focused in the US region. We provide several services that support home services</p>
+							</div>
+						</div>
+						<ul class="about__items">
+							<li class="about__item">Repair and Installation</li>
+							<li class="about__item">Plumbing</li>
+							<li class="about__item">Maintenance</li>
+							<li class="about__item">Budget-friendly</li>
+							<li class="about__item">Home Security Services</li>
+							<li class="about__item">Eco-friendly solutions</li>
+						</ul>
+						<div class="about__info">
+							We already 24 hours fast services to help you. You can contact us at <a href="tel:8886175894">(888) 617-5894</a>
+						</div>
+					</div>
+					<div class="about__image">
+						<picture><source srcset="img/about/image.webp" type="image/webp"><img src="img/about/image.png" alt="image"></picture>
+					</div>
+
+				</div>
+			</section>
+			<section class="services" data-watch-threshold="0.3" data-watch="navigator">
+				<div class="services__container" data-watch-threshold="0.3" data-watch="" data-watch-once="">
+					<div class="services__block-header block-header block-header--center">
+						<h2 class="block-header__title">Our Services</h2>
+						<div class="block-header__text">
+							<p>You have problems with leaking pipes, broken tiles, lost keys or want to tidy up the trees around you, of course you need our help!</p>
+						</div>
+					</div>
+					<ul class="services__items">
+						<li class="services__item item-services">
+							<div class="item-services__icon">
+								<img src="img/services/01.svg" alt="icon">
+							</div>
+							<h4 class="item-services__title">Plumbing services</h4>
+							<div class="item-services__text">
+								<p>Drain pipe leaking, pipe clogged, replace the pipe line</p>
+							</div>
+						</li>
+						<li class="services__item item-services">
+							<div class="item-services__icon">
+								<img src="img/services/02.svg" alt="icon">
+							</div>
+							<h4 class="item-services__title">Roofing repair</h4>
+							<div class="item-services__text">
+								<p>Roof leaks, tile replacement, roof cleaning and maintenance</p>
+							</div>
+						</li>
+						<li class="services__item item-services">
+							<div class="item-services__icon">
+								<img src="img/services/03.svg" alt="icon">
+							</div>
+							<h4 class="item-services__title">Mold Removal</h4>
+							<div class="item-services__text">
+								<p>Removing and cleaning mildew, Restoration and Prevention</p>
+							</div>
+						</li>
+						<li class="services__item item-services">
+							<div class="item-services__icon">
+								<img src="img/services/04.svg" alt="icon">
+							</div>
+							<h4 class="item-services__title">Tree Trimming</h4>
+							<div class="item-services__text">
+								<p>Trimming and cleaning, Deadwood removal, Tree shaping</p>
+							</div>
+						</li>
+						<li class="services__item item-services">
+							<div class="item-services__icon">
+								<img src="img/services/05.svg" alt="icon">
+							</div>
+							<h4 class="item-services__title">Appliance Repair</h4>
+							<div class="item-services__text">
+								<p>repair of washing machines, refrigerators, Air conditioner, etc</p>
+							</div>
+						</li>
+						<li class="services__item item-services">
+							<div class="item-services__icon">
+								<img src="img/services/06.svg" alt="icon">
+							</div>
+							<h4 class="item-services__title">Bathroom Remodeling</h4>
+							<div class="item-services__text">
+								<p>Design and Consulting, installation, Repairing, tile repair</p>
+							</div>
+						</li>
+						<li class="services__item item-services">
+							<div class="item-services__icon">
+								<img src="img/services/07.svg" alt="icon">
+							</div>
+							<h4 class="item-services__title">Locksmith</h4>
+							<div class="item-services__text">
+								<p>Lock Installation and Repair, Duplication, Lock Rekeying</p>
+							</div>
+						</li>
+						<li class="services__item item-services item-services--blue">
+							<h4 class="item-services__title">More service?</h4>
+							<div class="item-services__text">
+								<p>You can tell us what you need and we can help!</p>
+							</div>
+							<a class="item-services__button button button--fw button--min button--white" href="#">Call Us Now</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="advantages" data-watch-threshold="0.3" data-watch="navigator">
+				<div class="advantages__body">
+					<div class="advantages__container" data-watch-threshold="0.3" data-watch="" data-watch-once="">
+						<div class="advantages__block-header block-header block-header--inline">
+							<h2 class="block-header__title block-header__title--white">Fast, Friendly, and Satisfaction Guarantee</h2>
+							<div class="block-header__text block-header__text--lightgray">
+								<p>No matter how big or small your work is, whether it's for the interior or exterior of your home, we are ready to serve and help you solve your home problems.</p>
+							</div>
+						</div>
+						<ul class="advantages__items">
+							<li class="advantages__item item-advantages">
+								<div class="item-advantages__icon">
+									<img src="img/advantages/01.svg" alt="icon">
+								</div>
+								<div class="item-advantages__body">
+									<h4 class="item-advantages__title">Satisfaction Guarantee</h4>
+									<div class="item-advantages__text">
+										<p>you don't need to worry about scams or our performance results. our company has been verified and strives for optimal results</p>
+									</div>
+								</div>
+							</li>
+							<li class="advantages__item item-advantages">
+								<div class="item-advantages__icon">
+									<img src="img/advantages/02.svg" alt="icon">
+								</div>
+								<div class="item-advantages__body">
+									<h4 class="item-advantages__title">Free Quotes</h4>
+									<div class="item-advantages__text">
+										<p>Get personalized cost estimates without any obligation. Experience transparency and peace of mind as you explore our service.</p>
+									</div>
+								</div>
+							</li>
+							<li class="advantages__item item-advantages">
+								<div class="item-advantages__icon">
+									<img src="img/advantages/03.svg" alt="icon">
+								</div>
+								<div class="item-advantages__body">
+									<h4 class="item-advantages__title">Local Professionals</h4>
+									<div class="item-advantages__text">
+										<p>Our services cover the Nationwide, US area, including urban, suburban, and rural locations for both long and short term maintenance</p>
+									</div>
+								</div>
+							</li>
+							<li class="advantages__item item-advantages">
+								<div class="item-advantages__icon">
+									<img src="img/advantages/04.svg" alt="icon">
+								</div>
+								<div class="item-advantages__body">
+									<h4 class="item-advantages__title">Fast 24-Hour Service</h4>
+									<div class="item-advantages__text">
+										<p>need fast handling for repairs to drains, leaks or something else? Our experts are available anytime to help you solve the problem</p>
+									</div>
+								</div>
+							</li>
+							<li class="advantages__item item-advantages">
+								<div class="item-advantages__icon">
+									<img src="img/advantages/05.svg" alt="icon">
+								</div>
+								<div class="item-advantages__body">
+									<h4 class="item-advantages__title">Flexible Appointments</h4>
+									<div class="item-advantages__text">
+										<p>We offer convenient appointment times that can accommodate your busy schedule, day or night, 7 days a week.</p>
+									</div>
+								</div>
+							</li>
+							<li class="advantages__item item-advantages">
+								<div class="item-advantages__icon">
+									<img src="img/advantages/06.svg" alt="icon">
+								</div>
+								<div class="item-advantages__body">
+									<h4 class="item-advantages__title">100% Commitment-Free</h4>
+									<div class="item-advantages__text">
+										<p>You are free to ask us about the problems you are facing. We offer a no-commitment approach to put your mind at ease</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</section>
+			<section class="how">
+				<div class="how__container" data-watch-threshold="0.3" data-watch="" data-watch-once="">
+					<div class="how__image">
+						<picture><source srcset="img/how/image.webp" type="image/webp"><img src="img/how/image.jpg" alt="image"></picture>
+					</div>
+					<div class="how__content">
+						<div class="how__block-header block-header">
+							<h2 class="block-header__title">How HomePro works?</h2>
+						</div>
+						<ol class="how__list list-how">
+							<li class="list-how__item">
+								<span class="list-how__title">Call us anytime 24/7</span>
+								<span class="list-how__text text">You can contact us directly, we will quickly put you in touch with our home care professionals who are ready anytime</span>
+							</li>
+							<li class="list-how__item">
+								<span class="list-how__title">Schedule Service</span>
+								<span class="list-how__text text">After connecting your call, our home care experts will answer your questions and provide flexible appointment times</span>
+							</li>
+							<li class="list-how__item">
+								<span class="list-how__title">Your request is complated</span>
+								<span class="list-how__text text">Once your technician arrives, he will diagnose the problem and provide an estimate. If you decide to continue, the technician will get to work</span>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</section>
+			<section class="reviews">
+				<div class="reviews__container" data-watch-threshold="0.3" data-watch="" data-watch-once="">
+					<div class="reviews__block-header block-header block-header--center">
+						<h2 class="block-header__title">Here our original reviews from trusted platform</h2>
+					</div>
+					<div class="reviews__body">
+						<div class="reviews__slider swiper">
+							<div class="reviews__wrapper swiper-wrapper">
+								<div class="reviews__slide slide-reviews swiper-slide">
+									<div class="slide-reviews__logo">
+										<picture><source srcset="img/reviews/logo.webp" type="image/webp"><img src="img/reviews/logo.png" alt="logo"></picture>
+									</div>
+									<div class="slide-reviews__text text">
+										<p>Roof repairs can be a real headache, but HomePro makes it easy! Their roofing team turned my leaky roof into a stockade. With their craftsmanship and the best materials, my house is now ready to weather any storm.</p>
+									</div>
+									<div class="slide-reviews__user">
+										<div class="slide-reviews__avatar">
+											<picture><source srcset="img/reviews/image.webp" type="image/webp"><img src="img/reviews/image.jpg" alt="avatar"></picture>
+										</div>
+										<div class="slide-reviews__body">
+											<div class="slide-reviews__name">Kende Attila</div>
+											<div class="slide-reviews__rating rating rating_set">
+												<div class="rating__body">
+													<div class="rating__active"></div>
+													<div class="rating__items">
+														<input type="radio" class="rating__item" value="1" name="rating">
+														<input type="radio" class="rating__item" value="2" name="rating">
+														<input type="radio" class="rating__item" value="3" name="rating">
+														<input type="radio" class="rating__item" value="4" name="rating">
+														<input type="radio" class="rating__item" value="5" name="rating">
+													</div>
+												</div>
+												<div class="rating__value">4</div>
 											</div>
 										</div>
-										<div class="main__content content">
-											<h3 class="content__title">Design</h3>
-											<div class="content__text">
-												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam excepturi ullam fugiat nam quod earum!
-												</p>
+									</div>
+								</div>
+								<div class="reviews__slide slide-reviews swiper-slide">
+									<div class="slide-reviews__logo">
+										<picture><source srcset="img/reviews/logo.webp" type="image/webp"><img src="img/reviews/logo.png" alt="logo"></picture>
+									</div>
+									<div class="slide-reviews__text text">
+										<p>Roof repairs can be a real headache, but HomePro makes it easy! Their roofing team turned my leaky roof into a stockade. With their craftsmanship and the best materials, my house is now ready to weather any storm.</p>
+									</div>
+									<div class="slide-reviews__user">
+										<div class="slide-reviews__avatar">
+											<picture><source srcset="img/reviews/image.webp" type="image/webp"><img src="img/reviews/image.jpg" alt="avatar"></picture>
+										</div>
+										<div class="slide-reviews__body">
+											<div class="slide-reviews__name">Kende Attila</div>
+											<div class="slide-reviews__rating rating rating_set">
+												<div class="rating__body">
+													<div class="rating__active"></div>
+													<div class="rating__items">
+														<input type="radio" class="rating__item" value="1" name="rating">
+														<input type="radio" class="rating__item" value="2" name="rating">
+														<input type="radio" class="rating__item" value="3" name="rating">
+														<input type="radio" class="rating__item" value="4" name="rating">
+														<input type="radio" class="rating__item" value="5" name="rating">
+													</div>
+												</div>
+												<div class="rating__value">4</div>
 											</div>
-											<a href="#" class="content__link">Read More</a>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__slide slide-reviews swiper-slide">
+									<div class="slide-reviews__logo">
+										<picture><source srcset="img/reviews/logo.webp" type="image/webp"><img src="img/reviews/logo.png" alt="logo"></picture>
+									</div>
+									<div class="slide-reviews__text text">
+										<p>Roof repairs can be a real headache, but HomePro makes it easy! Their roofing team turned my leaky roof into a stockade. With their craftsmanship and the best materials, my house is now ready to weather any storm.</p>
+									</div>
+									<div class="slide-reviews__user">
+										<div class="slide-reviews__avatar">
+											<picture><source srcset="img/reviews/image.webp" type="image/webp"><img src="img/reviews/image.jpg" alt="avatar"></picture>
+										</div>
+										<div class="slide-reviews__body">
+											<div class="slide-reviews__name">Kende Attila</div>
+											<div class="slide-reviews__rating rating rating_set">
+												<div class="rating__body">
+													<div class="rating__active"></div>
+													<div class="rating__items">
+														<input type="radio" class="rating__item" value="1" name="rating">
+														<input type="radio" class="rating__item" value="2" name="rating">
+														<input type="radio" class="rating__item" value="3" name="rating">
+														<input type="radio" class="rating__item" value="4" name="rating">
+														<input type="radio" class="rating__item" value="5" name="rating">
+													</div>
+												</div>
+												<div class="rating__value">4</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__slide slide-reviews swiper-slide">
+									<div class="slide-reviews__logo">
+										<picture><source srcset="img/reviews/logo.webp" type="image/webp"><img src="img/reviews/logo.png" alt="logo"></picture>
+									</div>
+									<div class="slide-reviews__text text">
+										<p>Roof repairs can be a real headache, but HomePro makes it easy! Their roofing team turned my leaky roof into a stockade. With their craftsmanship and the best materials, my house is now ready to weather any storm.</p>
+									</div>
+									<div class="slide-reviews__user">
+										<div class="slide-reviews__avatar">
+											<picture><source srcset="img/reviews/image.webp" type="image/webp"><img src="img/reviews/image.jpg" alt="avatar"></picture>
+										</div>
+										<div class="slide-reviews__body">
+											<div class="slide-reviews__name">Kende Attila</div>
+											<div class="slide-reviews__rating rating rating_set">
+												<div class="rating__body">
+													<div class="rating__active"></div>
+													<div class="rating__items">
+														<input type="radio" class="rating__item" value="1" name="rating">
+														<input type="radio" class="rating__item" value="2" name="rating">
+														<input type="radio" class="rating__item" value="3" name="rating">
+														<input type="radio" class="rating__item" value="4" name="rating">
+														<input type="radio" class="rating__item" value="5" name="rating">
+													</div>
+												</div>
+												<div class="rating__value">4</div>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="main__slide swiper-slide">
-								<div class="main__cart" style="--clr: #98ff21">
-									<div class="main__box">
-										<div class="main__icon">
-											<div class="main__iconBox">
-												<ion-icon name="paw-outline"></ion-icon>
-											</div>
-										</div>
-										<div class="main__content content">
-											<h3 class="content__title">Development</h3>
-											<div class="content__text">
-												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam excepturi ullam fugiat nam quod earum!
-												</p>
-											</div>
-											<a href="#" class="content__link">Read More</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="main__slide swiper-slide">
-								<div class="main__cart" style="--clr: #fffb0b">
-									<div class="main__box">
-										<div class="main__icon">
-											<div class="main__iconBox">
-												<ion-icon name="sunny-outline"></ion-icon>
-											</div>
-										</div>
-										<div class="main__content content">
-											<h3 class="content__title">Code</h3>
-											<div class="content__text">
-												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam excepturi ullam fugiat nam quod earum!
-												</p>
-											</div>
-											<a href="#" class="content__link">Read More</a>
-										</div>
-									</div>
-								</div>
-							</div>
+							<button class="reviews__arrow reviews__arrow--left" type="button"></button>
+							<button class="reviews__arrow reviews__arrow--right" type="button"></button>
+							<div class="reviews__bullets"></div>
 						</div>
 					</div>
 				</div>
 			</section>
+			<section class="blog" data-watch-threshold="0.3" data-watch="navigator">
+				<div class="blog__container" data-watch-threshold="0.3" data-watch="" data-watch-once="">
+					<div class="blog__block-header block-header block-header--center">
+						<h2 class="block-header__title">Explore Insights in Our Blog</h2>
+						<div class="block-header__text block-header__text--big">
+							<p>Find lots of insights and information on our blog. Explore, learn, and get inspired today.</p>
+						</div>
+					</div>
+					<div class="blog__items">
+						<article class="blog__item item-blog">
+							<a class="item-blog__image-ibg" href="#">
+								<picture><source srcset="img/blog/01.webp" type="image/webp"><img src="img/blog/01.jpg" alt="image"></picture>
+							</a>
+							<div class="item-blog__date">19 Jan 2023</div>
+							<h4 class="item-blog__title">
+								<a class="item-blog__link-title" href="#">Understanding Smart Home Systems & Maintenance</a>
+							</h4>
+							<div class="item-blog__text text">
+								<p>Discover the ultimate guide to troubleshooting common smart home issues in our latest blog post. From connectivity problems to device malfunctions, we provide step-by-step solutions to help you restore the seamless functionality of your smart home system. Gain expert insights, practical tips, and insider advice to keep your home automation running smoothly. Don't let technical glitches hinder your smart home experience - empower yourself with the knowledge to resolve issues and enjoy the convenience of your connected home. Visit our blog now and become a troubleshooting pro!</p>
+							</div>
+							<ul class="item-blog__tags">
+								<li class="item-blog__tag"><a href="#">Plumbing</a></li>
+								<li class="item-blog__tag"><a href="#">Architecture</a></li>
+								<li class="item-blog__tag"><a href="#">Maintenance</a></li>
+							</ul>
+						</article>
+					</div>
+					<button class="blog__view-more" type="button">View More</button>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
+			<div class="footer__container">
+			</div>
 		</footer>
 	</div>
-	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js?_v=20230921154001"></script>
-	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js?_v=20230921154001"></script>
-	<script src="js/app.min.js?_v=20230921154001"></script>
+	<script src="js/app.min.js?_v=20231007014435"></script>
 </body>
 
 </html>
