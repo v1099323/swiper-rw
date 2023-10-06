@@ -3441,6 +3441,7 @@
             spaceBetween: 15,
             autoHeight: true,
             speed: 800,
+            touchRatio: 1.5,
             pagination: {
                 el: ".reviews__bullets",
                 clickable: true
