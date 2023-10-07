@@ -3687,6 +3687,64 @@
     }
     const da = new DynamicAdapt("max");
     da.init();
+    const blogItems = document.querySelector(".blog__items");
+    let data;
+    let startItem = 0;
+    let endItem = 3;
+    if (blogItems) loadBlogItems();
+    async function loadBlogItems() {
+        const response = await fetch("files/blog.json", {
+            method: "GET"
+        });
+        if (response.ok) {
+            const responseResult = await response.json();
+            data = responseResult;
+            initBlog(data, startItem, endItem);
+        } else alert("Error!");
+    }
+    function initBlog(data) {
+        const dataPart = data.items.slice(startItem, endItem);
+        dataPart.forEach((item => {
+            BuildBlogItem(item);
+        }));
+        viewMore();
+    }
+    function BuildBlogItem(item) {
+        let blogItemTemplate = ``;
+        blogItemTemplate += `<article class="blog__item item-blog" data-id="${item.id}">`;
+        item.image ? blogItemTemplate += `\n    <a class="item-blog__image-ibg" href="${item.url}">\n      <img src="${item.image}" alt="image">\n    </a>\n    ` : null;
+        blogItemTemplate += ` <div class="item-blog__date">${item.date}</div>`;
+        blogItemTemplate += `\n     <h4 class="item-blog__title">\n      <a class="item-blog__link-title" href="${item.url}">${item.title}</a>\n      </h4>\n    `;
+        item.text ? blogItemTemplate += `\n    <div class="item-blog__text text">\n    <p>${item.text}</p>\n    </div>\n    ` : null;
+        if (item.tags) {
+            blogItemTemplate += `<ul class="item-blog__tags">`;
+            const tagsObject = item.tags[0];
+            for (const tagName in tagsObject) if (tagsObject.hasOwnProperty(tagName)) {
+                const tagURL = tagsObject[tagName];
+                blogItemTemplate += `<li class="item-blog__tag"><a href="${tagURL}">${tagName}</a></li>`;
+            }
+            blogItemTemplate += `</ul>`;
+        }
+        blogItemTemplate += `</article>`;
+        blogItems.insertAdjacentHTML("beforeend", blogItemTemplate);
+    }
+    document.addEventListener("click", documentActions);
+    function viewMore() {
+        const dataItemsLength = data.items.length;
+        const currentItems = document.querySelectorAll(".item-blog").length;
+        const viewMore = document.querySelector(".blog__view-more");
+        console.log(currentItems, "currentItems");
+        currentItems < dataItemsLength ? viewMore.hidden = false : viewMore.hidden = true;
+    }
+    function documentActions(e) {
+        const targetElement = e.target;
+        if (targetElement.closest(".blog__view-more")) {
+            startItem = document.querySelectorAll(".item-blog").length;
+            endItem = startItem + 3;
+            initBlog(data, startItem, endItem);
+            e.preventDefault;
+        }
+    }
     window["FLS"] = true;
     isWebp();
     addLoadedClass();
