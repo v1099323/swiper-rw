@@ -4132,7 +4132,6 @@
         const dataItemsLength = data.items.length;
         const currentItems = document.querySelectorAll(".item-blog").length;
         const viewMore = document.querySelector(".blog__view-more");
-        console.log(currentItems, "currentItems");
         currentItems < dataItemsLength ? viewMore.hidden = false : viewMore.hidden = true;
     }
     function documentActions(e) {
