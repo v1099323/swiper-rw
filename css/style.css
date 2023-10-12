@@ -1794,10 +1794,6 @@ textarea.input {
   max-width: 100%;
 }
 
-.talk__image picture source {
-  max-width: 100%;
-}
-
 .swiper {
   overflow: hidden;
 }
@@ -1852,10 +1848,6 @@ textarea.input {
   }
 
   .talk__image img:last-child {
-    display: none;
-  }
-
-  .talk__image picture source:last-child {
     display: none;
   }
 }
@@ -1960,15 +1952,6 @@ textarea.input {
   }
 
   .talk__image img {
-    max-width: 100%;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2/3;
-    -ms-grid-column-align: end;
-        justify-self: end;
-  }
-
-  .talk__image picture source {
     max-width: 100%;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
@@ -2875,10 +2858,6 @@ textarea.input {
   }
 
   .talk__image img:first-child {
-    display: none;
-  }
-
-  .talk__image picture source:first-child {
     display: none;
   }
 }
